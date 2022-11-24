@@ -1,0 +1,32 @@
+.movie-card-div{
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.movie-poster{
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.poster-overlay{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.3s ease 0s;
+    top: 0;
+    width: 100%;
+    height: 99%;
+    background-color: rgba(0, 0, 0, 0.602);
+    padding: 0 20px;
+}
+.poster-overlay:hover{
+    opacity: 1;
+}
+.poster-overlay > h4{
+    color: var(--light); 
+}

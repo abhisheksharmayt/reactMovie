@@ -1,0 +1,16 @@
+.popular-section {
+    max-width: 1280px;
+    margin: 0px auto;
+    padding: 0px 20px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.popular-movies-div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+}
