@@ -4,6 +4,7 @@
     border-radius: 20px;
 }
 .movie-poster{
+    display: block;
     position: relative;
     width: 100%;
     max-width: 720px;
@@ -13,14 +14,15 @@
 }
 .poster-overlay{
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* align-items: flex-end; */
     opacity: 0;
     position: absolute;
     transition: all 0.3s ease 0s;
     top: 0;
     width: 100%;
-    height: 99%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.602);
     padding: 0 20px;
 }
