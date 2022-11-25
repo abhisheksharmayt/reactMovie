@@ -5,6 +5,10 @@
     height: 5rem;
     background-color: var(--dark1);
 }
+a{
+    text-decoration: none;
+    color: white;
+}
 
 .movie-header>h2 {
     font-size: 1.2rem;

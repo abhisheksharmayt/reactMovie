@@ -1,7 +1,8 @@
 import React from 'react'
 import './style.css'
+import default_img from '../../images/default_img.png'
 const MovieCard = ({ movie }) => {
-    const moviePoster = `https://image.tmdb.org/t/p/w342${movie.poster_path}`;
+    const moviePoster = (movie.poster_path === null) ? (default_img) : (`https://image.tmdb.org/t/p/w342${movie.poster_path}`);
     return (
         <div className='movie-card-div'>
             <img src={moviePoster} alt={movie.title} className="movie-poster" loading="lazy" />

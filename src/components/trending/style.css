@@ -29,7 +29,7 @@
     color: var(--light);
 }
 .about-trending > h1{
-    font-size: 6em;
+    font-size: 5.5em;
     margin: 0 0;
 }
 .search-bar-div{
@@ -70,4 +70,10 @@ form{
 }
 #movieSearch:focus{
     outline: 0;
+}
+
+@media (max-width:800px){
+    .about-trending > h1{
+        font-size: 4rem;
+    }
 }

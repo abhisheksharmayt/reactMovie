@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useFetch } from '../../Hook/useFetch'
 import Actor from '../actor/Actor'
+import Loading from '../loading/Loading'
 import './style.css'
 const Movie = () => {
     const { id } = useParams();
@@ -9,7 +10,7 @@ const Movie = () => {
     const credits = useFetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${process.env.REACT_APP_API_KEY}`);
     // console.log(data);
     if (loading || credits.loading) {
-        return <div>loading</div>
+        return <Loading/>
     }
     else {
         const backdrop_image = `https://image.tmdb.org/t/p/w1280${data.backdrop_path}`;
@@ -20,7 +21,7 @@ const Movie = () => {
             <>
                 <section className="movie-section">
                     <div className="movie-header">
-                        <h2>Home | {data.original_title}</h2>
+                        <h2><a href='/'>Home</a> | {data.original_title}</h2>
                     </div>
                     <div className="movie-div" style={{ backgroundImage: `url(${backdrop_image})` }}>
                         <div className='movie-overlay-div'>

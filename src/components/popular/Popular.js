@@ -1,6 +1,7 @@
 import React from 'react'
 import { useFetch } from '../../Hook/useFetch'
 import MovieCard from '../moviecard/MovieCard'
+import Loading from '../loading/Loading'
 import './style.css'
 
 const Popular = () => {
@@ -9,7 +10,7 @@ const Popular = () => {
     const config = useFetch(`https://api.themoviedb.org/3/configuration?api_key=${process.env.REACT_APP_API_KEY}`)
     // console.log(config);
     if (loading) {
-        return <h1>Loading..</h1>
+        return <Loading/>
     }
     else {
         return (
